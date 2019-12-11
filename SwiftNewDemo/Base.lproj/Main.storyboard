@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftNewDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="101"/>
+        </scene>
+        <!--Image Show View Controller-->
+        <scene sceneID="DsQ-dj-L7g">
+            <objects>
+                <viewController storyboardIdentifier="ImageShowViewController" id="wm4-d8-Qna" customClass="ImageShowViewController" customModule="SwiftNewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="71G-0W-8p6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.20000000000000001" maximumZoomScale="20" translatesAutoresizingMaskIntoConstraints="NO" id="krN-ko-SPt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRy-f9-k83">
+                                        <rect key="frame" x="0.0" y="9" width="2000" height="1400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2000" id="0pb-Cn-Tvc"/>
+                                            <constraint firstAttribute="height" constant="1400" id="M9z-jh-Pch"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bRy-f9-k83" secondAttribute="trailing" id="AOF-Vz-bUv"/>
+                                    <constraint firstItem="bRy-f9-k83" firstAttribute="top" secondItem="krN-ko-SPt" secondAttribute="top" constant="9" id="kcD-MK-JOx"/>
+                                    <constraint firstAttribute="bottom" secondItem="bRy-f9-k83" secondAttribute="bottom" constant="24" id="mwy-Da-tbV"/>
+                                    <constraint firstItem="bRy-f9-k83" firstAttribute="leading" secondItem="krN-ko-SPt" secondAttribute="leading" id="uAT-WH-U0J"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PUT-7t-CAt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oh2-4r-Xkw"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wm4-d8-Qna" id="Pz4-d4-wYS"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d0-tw-Msq">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hEB-Dg-CDR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="R0F-qZ-Duh"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AgO-oh-evU" firstAttribute="bottom" secondItem="krN-ko-SPt" secondAttribute="bottom" id="0Ma-hm-Iwj"/>
+                            <constraint firstItem="krN-ko-SPt" firstAttribute="centerX" secondItem="71G-0W-8p6" secondAttribute="centerX" id="I7y-0c-Lei"/>
+                            <constraint firstItem="krN-ko-SPt" firstAttribute="leading" secondItem="AgO-oh-evU" secondAttribute="leading" id="fmE-Dk-TqQ"/>
+                            <constraint firstItem="krN-ko-SPt" firstAttribute="top" secondItem="AgO-oh-evU" secondAttribute="top" id="fwW-Ay-A8t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AgO-oh-evU"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bRy-f9-k83" id="jND-pK-Lvq"/>
+                        <outlet property="scrollView" destination="4d0-tw-Msq" id="1FB-q0-EcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0h-wN-a4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859.4202898550725" y="106.47321428571428"/>
         </scene>
     </scenes>
 </document>
