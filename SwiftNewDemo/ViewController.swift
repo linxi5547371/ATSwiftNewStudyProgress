@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 //        customSequenceTest()
 //        customStringTest()
         print(optionsTest())
+        getColorWithRGBTest()
         
     }
     
@@ -78,6 +79,11 @@ class ViewController: UIViewController {
             result.append("iOS")
         }
         return result
+    }
+    
+    func getColorWithRGBTest() {
+        self.view.backgroundColor = UIColor.getColorWithRGB(RGBValue: 0x00FFFF)
+//        self.view.backgroundColor = UIColor.getColorWithRGBStr(RGBStr: "00ffff")
     }
 }
 
