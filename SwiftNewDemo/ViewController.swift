@@ -11,6 +11,8 @@ import UIKit
 //Swift新特性Demo
 
 class ViewController: UIViewController {
+    static let animal = Animal()
+    @ModelType(ViewController.animal) var type: Animal.ModelType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
 //        customStringTest()
         print(optionsTest())
         getColorWithRGBTest()
+        testPropertyWrapper()
         
     }
     
@@ -84,6 +87,10 @@ class ViewController: UIViewController {
     func getColorWithRGBTest() {
         self.view.backgroundColor = UIColor.getColorWithRGB(RGBValue: 0x00FFFF)
 //        self.view.backgroundColor = UIColor.getColorWithRGBStr(RGBStr: "00ffff")
+    }
+    
+    func testPropertyWrapper() {
+        self.type = Animal.AnimalType.bird
     }
 }
 

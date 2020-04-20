@@ -10,8 +10,6 @@
 		920876432372831B008C5B73 /* CustomStringInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920876422372831B008C5B73 /* CustomStringInterpolation.swift */; };
 		92246194239761AB006A1D08 /* ImageShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92246193239761AB006A1D08 /* ImageShowViewController.swift */; };
 		92246196239764DA006A1D08 /* bigImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 92246195239764DA006A1D08 /* bigImage.jpeg */; };
-		92246199239784BF006A1D08 /* baylor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92246198239784BF006A1D08 /* baylor.jpg */; };
-		9224619B2397A092006A1D08 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9224619A2397A092006A1D08 /* Earth.jpg */; };
 		9291C1CB235DA92B001F2913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291C1CA235DA92B001F2913 /* AppDelegate.swift */; };
 		9291C1CD235DA92B001F2913 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291C1CC235DA92B001F2913 /* SceneDelegate.swift */; };
 		9291C1CF235DA92B001F2913 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291C1CE235DA92B001F2913 /* ViewController.swift */; };
@@ -26,6 +24,7 @@
 		92EA576A23A0E05F00A3352A /* NSOptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA576923A0E05F00A3352A /* NSOptionSet.swift */; };
 		92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA576B23A1E62200A3352A /* UIColor+Extension.swift */; };
 		92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA576D23A1EF2200A3352A /* String+Extension.swift */; };
+		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +48,6 @@
 		920876422372831B008C5B73 /* CustomStringInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringInterpolation.swift; sourceTree = "<group>"; };
 		92246193239761AB006A1D08 /* ImageShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageShowViewController.swift; sourceTree = "<group>"; };
 		92246195239764DA006A1D08 /* bigImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigImage.jpeg; sourceTree = "<group>"; };
-		92246198239784BF006A1D08 /* baylor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = baylor.jpg; path = ../../../../../Downloads/baylor.jpg; sourceTree = "<group>"; };
-		9224619A2397A092006A1D08 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Earth.jpg; path = ../../../../../Downloads/Earth.jpg; sourceTree = "<group>"; };
 		9291C1C7235DA92B001F2913 /* SwiftNewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9291C1CA235DA92B001F2913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9291C1CC235DA92B001F2913 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +68,7 @@
 		92EA576923A0E05F00A3352A /* NSOptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOptionSet.swift; sourceTree = "<group>"; };
 		92EA576B23A1E62200A3352A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		92EA576D23A1EF2200A3352A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				92246195239764DA006A1D08 /* bigImage.jpeg */,
-				9224619A2397A092006A1D08 /* Earth.jpg */,
-				92246198239784BF006A1D08 /* baylor.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -171,6 +167,7 @@
 				9291C1FD235DC2B4001F2913 /* CustomSequence.swift */,
 				920876422372831B008C5B73 /* CustomStringInterpolation.swift */,
 				92EA576923A0E05F00A3352A /* NSOptionSet.swift */,
+				B92A1C91244DB4800086BA3F /* propertyWrapper.swift */,
 			);
 			path = SwiftNew;
 			sourceTree = "<group>";
@@ -292,8 +289,6 @@
 				9291C1D7235DA92D001F2913 /* LaunchScreen.storyboard in Resources */,
 				9291C1D4235DA92D001F2913 /* Assets.xcassets in Resources */,
 				92246196239764DA006A1D08 /* bigImage.jpeg in Resources */,
-				92246199239784BF006A1D08 /* baylor.jpg in Resources */,
-				9224619B2397A092006A1D08 /* Earth.jpg in Resources */,
 				9291C1D2235DA92B001F2913 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +324,7 @@
 				920876432372831B008C5B73 /* CustomStringInterpolation.swift in Sources */,
 				92246194239761AB006A1D08 /* ImageShowViewController.swift in Sources */,
 				9291C1FB235DC0ED001F2913 /* JSONDynamic.swift in Sources */,
+				B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */,
 				92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
