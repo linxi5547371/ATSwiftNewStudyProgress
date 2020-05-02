@@ -25,6 +25,7 @@
 		92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA576B23A1E62200A3352A /* UIColor+Extension.swift */; };
 		92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA576D23A1EF2200A3352A /* String+Extension.swift */; };
 		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
+		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		92EA576B23A1E62200A3352A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		92EA576D23A1EF2200A3352A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
+		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		9291C1C9235DA92B001F2913 /* SwiftNewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B92A1C95245025420086BA3F /* Model */,
 				929E9EA42398B5A800487C2F /* Extension */,
 				92246197239764DF006A1D08 /* Resource */,
 				9291C1FC235DC1D5001F2913 /* SwiftNew */,
@@ -180,6 +183,14 @@
 				92EA576D23A1EF2200A3352A /* String+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B92A1C95245025420086BA3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B92A1C96245025590086BA3F /* ATQuestionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				9291C1FB235DC0ED001F2913 /* JSONDynamic.swift in Sources */,
 				B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */,
 				92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */,
+				B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
