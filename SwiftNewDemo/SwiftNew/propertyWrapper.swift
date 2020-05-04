@@ -10,12 +10,12 @@ import Foundation
 
 protocol ModelDelegate {
     associatedtype ModelType: Equatable
-    var type: ModelType { get set }
+    var modelType: ModelType { get set }
     func getType() -> ModelType
 }
 
 class Animal: ModelDelegate {
-    var type: AnimalType = .bird
+    var modelType: AnimalType = .bird
     typealias ModelType = AnimalType
     
     enum AnimalType: Int {
@@ -25,7 +25,7 @@ class Animal: ModelDelegate {
     }
     
     func getType() -> AnimalType {
-        return type
+        return modelType
     }
     
 }
@@ -39,7 +39,7 @@ struct ModelType<T: ModelDelegate> {
             return model.getType()
         }
         nonmutating set {
-            if (newValue == model.type) {
+            if (newValue == model.modelType) {
                 print("isSame")
             } else {
                 print("Not Same")
