@@ -35,11 +35,13 @@ class ViewController: UIViewController {
         People.dynamicChangeInstanceMethod(selector: #selector(People.logName), action: nil)
         People.dynamicChangeClassMethod(selector: #selector(People.decInfo), action: nil)
         let p = People(name: "Albert")
-//        p.dynamicCreatClass(selector: #selector(People.logName), action: nil)
         p.logName()
         p.perform(#selector(People.logName))
         People.decInfo()
         
+        let pp = People(name: "Albert1111")
+        pp.dynamicCreatClass(selector: #selector(People.logName), action: nil)
+        pp.logName()
     }
     
     func jsonDynamicTest() {
@@ -203,10 +205,10 @@ extension NSObject {
                 guard let _ = nullSelf else { return }
                 // 获取原来类中方法的Imp
                 let originalImp = class_getMethodImplementation(originalClass, selector)
-                // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL
-                typealias ObjcVoidFn = @convention(c) (Any, Selector) -> ()
+                // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL 之后是函数的参数
+                typealias IMPCType = @convention(c) (Any, Selector) -> ()
                 // 将imp强转为兼容c的函数指针
-                let originalPrintName = unsafeBitCast(originalImp, to: ObjcVoidFn.self)
+                let originalPrintName = unsafeBitCast(originalImp, to: IMPCType.self)
                 // 执行原方法 类似super.originFuncion()
                 originalPrintName(self, selector)
                 print("Dynamic")
@@ -230,7 +232,7 @@ extension NSObject {
         if let method = method, self.init().responds(to: selector) {
             // 获取原来方法的IMP
             let oldImp = method_getImplementation(method)
-            // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL
+            // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL 之后是函数的参数
             typealias IMPCType = @convention(c) (Any, Selector) -> Void
             // 将imp强转为兼容c的函数指针
             let oldImpBlock = unsafeBitCast(oldImp, to: IMPCType.self)
@@ -256,10 +258,10 @@ extension NSObject {
         if let method = method, self.responds(to: selector) {
             // 获取原来方法的IMP
             let oldImp = method_getImplementation(method)
-            // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL
-            typealias ImpType = @convention(c) (Any, Selector) -> Void
+            // 定义一个方法类型与msgSend的参数类似 第一个参数是对象，第二个参数是SEL 之后是函数的参数
+            typealias IMPCType = @convention(c) (Any, Selector) -> Void
             // 将imp强转为兼容c的函数指针
-            let oldImpBlock = unsafeBitCast(oldImp, to: ImpType.self)
+            let oldImpBlock = unsafeBitCast(oldImp, to: IMPCType.self)
             // 实现新的方法
             let newFuncion: @convention(block) (Any) -> Void = {
                 (sself) in
