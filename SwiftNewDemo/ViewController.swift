@@ -13,6 +13,9 @@ import UIKit
 class ViewController: UIViewController {
     static let animal = Animal()
     @ModelType(ViewController.animal) var modelType: Animal.ModelType?
+    let normalClosure: (() -> Void)? = {
+        print("This is normalClosure")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,28 +30,19 @@ class ViewController: UIViewController {
 //        getColorWithRGBTest()
 //        testPropertyWrapper()
 //        computeExecuteTime()
-        
+//        addMethodByDynamic()
+        testGreatInt()
+    
         autoreleasepool { // 出了作用域就会被释放
             let str = "123"
         }
-        
-        People.dynamicChangeInstanceMethod(selector: #selector(People.logName), action: nil)
-        People.dynamicChangeClassMethod(selector: #selector(People.decInfo), action: nil)
-        let p = People(name: "Albert")
-        p.logName()
-        p.perform(#selector(People.logName))
-        People.decInfo()
-        
-        let pp = People(name: "Albert1111")
-        pp.dynamicCreatClass(selector: #selector(People.logName), action: nil)
-        pp.logName()
     }
     
     func jsonDynamicTest() {
         let p = People(name: "Albert")
         print(People(name: "Albert").city)
         let peopleKeyPath = \People.name
-        let value = p[keyPath: peopleKeyPath] // TODO: 反斜杠是KeyPath调用吗？
+        let value = p[keyPath: peopleKeyPath] // KeyPath
 
         print(p.value(forKeyPath: "name"))
         print(value)
@@ -123,6 +117,35 @@ class ViewController: UIViewController {
             result += num
         }
         return result
+    }
+    
+    //给类动态添加方法
+    func addMethodByDynamic() {
+        People.dynamicChangeInstanceMethod(selector: #selector(People.logName), action: nil)
+        People.dynamicChangeClassMethod(selector: #selector(People.decInfo), action: nil)
+        let p = People(name: "Albert")
+        p.logName()
+        p.perform(#selector(People.logName))
+        People.decInfo()
+        
+        let pp = People(name: "Albert1111")
+        pp.dynamicCreatClass(selector: #selector(People.logName), action: nil)
+        pp.logName()
+    }
+    
+    func testGreatInt() {
+        ATGreatInt().setData()
+    }
+    
+    func customDebugGuide() {
+//        let bigNum: Int64 = 2
+//        #if DEBUG
+//        #sourceLocation(file: "123", line: 38)
+//        #error("This code is incomplete")
+//        #endif
+//        if bigNum > 0 {
+//            fatalError( "This code is incomplete. Please fix before release.")
+//        }
     }
 }
 

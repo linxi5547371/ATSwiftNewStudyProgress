@@ -18,6 +18,6 @@ extension UIColor {
     }
     
     static func getColorWithRGBStr(RGBStr: String) -> UIColor {
-        return getColorWithRGB(RGBValue: RGBStr.hexStringToInt())
+        return getColorWithRGB(RGBValue: RGBStr.hexStringToIntSystem())
     }
 }

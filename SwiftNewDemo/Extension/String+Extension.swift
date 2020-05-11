@@ -22,4 +22,9 @@ extension String {
         }
         return result
     }
+    
+    func hexStringToIntSystem() -> UInt64 {
+        //通过字符串创建一个16进制的数，失败则返回nil
+        return UInt64(self, radix: 16) ?? 0
+    }
 }
