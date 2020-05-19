@@ -27,6 +27,7 @@
 		B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D3224655CB200BF268E /* ATGreatInt.swift */; };
 		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
 		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
+		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B9224D3224655CB200BF268E /* ATGreatInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATGreatInt.swift; sourceTree = "<group>"; };
 		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
 		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
+		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				929E9EA52398B5C200487C2F /* UIImage+Extension.swift */,
 				92EA576B23A1E62200A3352A /* UIColor+Extension.swift */,
 				92EA576D23A1EF2200A3352A /* String+Extension.swift */,
+				B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */,
 				9291C1CB235DA92B001F2913 /* AppDelegate.swift in Sources */,
 				9291C1CD235DA92B001F2913 /* SceneDelegate.swift in Sources */,
+				B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */,
 				B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */,
 				92EA576A23A0E05F00A3352A /* NSOptionSet.swift in Sources */,
 				929E9EA62398B5C200487C2F /* UIImage+Extension.swift in Sources */,

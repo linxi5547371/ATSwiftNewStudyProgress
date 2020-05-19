@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 加载大图
 extension UIImage {
     //根据图片大小绘制图片节省内存空间
     static func getImageWithSize(size: CGSize, imageURL: URL) -> UIImage? {
@@ -77,5 +78,28 @@ extension UIImage {
         context?.draw(image, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         guard let scaledImage = context?.makeImage() else { return nil }
         return UIImage(cgImage: scaledImage)
+    }
+}
+
+//截取屏幕
+extension UIImage {
+    class func cutCurrentViewToImage(view: UIView) -> UIImage? {
+        var image: UIImage? = nil
+        let size = view.bounds.size
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        if let context = UIGraphicsGetCurrentContext() {
+            view.layer.render(in: context)
+            image = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    class func cutCurrentViewWithRender(view: UIView) -> UIImage? {
+        let render = UIGraphicsImageRenderer(bounds: view.bounds)
+        return render.image(actions: { (context) in
+            return view.layer.render(in: context.cgContext)
+        })
+        
     }
 }
