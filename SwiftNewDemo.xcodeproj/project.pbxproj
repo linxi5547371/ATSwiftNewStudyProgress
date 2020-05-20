@@ -27,6 +27,7 @@
 		B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D3224655CB200BF268E /* ATGreatInt.swift */; };
 		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
 		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
+		B96183372475351A004DA78C /* DDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96183362475351A004DA78C /* DDLog.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		B9224D3224655CB200BF268E /* ATGreatInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATGreatInt.swift; sourceTree = "<group>"; };
 		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
 		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
+		B96183362475351A004DA78C /* DDLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLog.swift; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				B9224D3224655CB200BF268E /* ATGreatInt.swift */,
+				B96183362475351A004DA78C /* DDLog.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96183372475351A004DA78C /* DDLog.swift in Sources */,
 				9291C1CF235DA92B001F2913 /* ViewController.swift in Sources */,
 				92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */,
 				9291C1CB235DA92B001F2913 /* AppDelegate.swift in Sources */,

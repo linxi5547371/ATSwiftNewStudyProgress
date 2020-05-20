@@ -23,6 +23,10 @@ class ViewController: UIViewController {
             print("viewDidLoad")
         }
         
+//        ATLog.log(type: .message, message: "message")
+//        ATLog.log(type: .warning, message: "warning")
+//        ATLog.log(type: .error, message: "error")
+        
 //        jsonDynamicTest()
 //        customSequenceTest()
 //        customStringTest()
