@@ -28,6 +28,7 @@
 		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
 		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
 		B96183372475351A004DA78C /* DDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96183362475351A004DA78C /* DDLog.swift */; };
+		B977BFA824767D8A0007FB5D /* BaseJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
 		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
 		B96183362475351A004DA78C /* DDLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLog.swift; sourceTree = "<group>"; };
+		B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonModel.swift; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B92A1C96245025590086BA3F /* ATQuestionModel.swift */,
+				B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				9291C1CF235DA92B001F2913 /* ViewController.swift in Sources */,
 				92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */,
 				9291C1CB235DA92B001F2913 /* AppDelegate.swift in Sources */,
+				B977BFA824767D8A0007FB5D /* BaseJsonModel.swift in Sources */,
 				9291C1CD235DA92B001F2913 /* SceneDelegate.swift in Sources */,
 				B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */,
 				B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */,
