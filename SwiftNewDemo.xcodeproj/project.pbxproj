@@ -29,6 +29,9 @@
 		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
 		B96183372475351A004DA78C /* DDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96183362475351A004DA78C /* DDLog.swift */; };
 		B977BFA824767D8A0007FB5D /* BaseJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */; };
+		B99704F32480AAE400A20B1E /* UINavigationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */; };
+		B9A489BA24874F8400E2B676 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489B924874F8400E2B676 /* UILabel+Extension.swift */; };
+		B9A489BD248910E800E2B676 /* UnknownEnumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
 		B96183362475351A004DA78C /* DDLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLog.swift; sourceTree = "<group>"; };
 		B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonModel.swift; sourceTree = "<group>"; };
+		B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationViewController+Extension.swift"; sourceTree = "<group>"; };
+		B9A489B924874F8400E2B676 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownEnumerate.swift; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +186,7 @@
 				920876422372831B008C5B73 /* CustomStringInterpolation.swift */,
 				92EA576923A0E05F00A3352A /* NSOptionSet.swift */,
 				B92A1C91244DB4800086BA3F /* propertyWrapper.swift */,
+				B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */,
 			);
 			path = SwiftNew;
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 				92EA576B23A1E62200A3352A /* UIColor+Extension.swift */,
 				92EA576D23A1EF2200A3352A /* String+Extension.swift */,
 				B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */,
+				B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */,
+				B9A489B924874F8400E2B676 /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,15 +362,18 @@
 				9291C1CD235DA92B001F2913 /* SceneDelegate.swift in Sources */,
 				B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */,
 				B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */,
+				B9A489BA24874F8400E2B676 /* UILabel+Extension.swift in Sources */,
 				92EA576A23A0E05F00A3352A /* NSOptionSet.swift in Sources */,
 				929E9EA62398B5C200487C2F /* UIImage+Extension.swift in Sources */,
 				9291C1FE235DC2B4001F2913 /* CustomSequence.swift in Sources */,
 				920876432372831B008C5B73 /* CustomStringInterpolation.swift in Sources */,
 				92246194239761AB006A1D08 /* ImageShowViewController.swift in Sources */,
 				9291C1FB235DC0ED001F2913 /* JSONDynamic.swift in Sources */,
+				B99704F32480AAE400A20B1E /* UINavigationViewController+Extension.swift in Sources */,
 				B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */,
 				92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */,
 				B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */,
+				B9A489BD248910E800E2B676 /* UnknownEnumerate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

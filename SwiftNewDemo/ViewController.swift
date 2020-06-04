@@ -35,11 +35,13 @@ class ViewController: UIViewController {
 //        testPropertyWrapper()
 //        computeExecuteTime()
 //        addMethodByDynamic()
-        testGreatInt()
+//        testGreatInt()
+        testUnknownEnumerate()
     
         autoreleasepool { // 出了作用域就会被释放
             let str = "123"
         }
+        
     }
     
     func jsonDynamicTest() {
@@ -99,7 +101,7 @@ class ViewController: UIViewController {
     
     func getColorWithRGBTest() {
         self.view.backgroundColor = UIColor.getColorWithRGB(RGBValue: 0x00FFFF)
-//        self.view.backgroundColor = UIColor.getColorWithRGBStr(RGBStr: "00ffff")
+//        self.view.backgroundColor = UIColor.getColorWithRGBStr(RGBStr: "00ffff") // String(100, radix: 16)
     }
     
     func testPropertyWrapper() {
@@ -150,6 +152,11 @@ class ViewController: UIViewController {
 //        if bigNum > 0 {
 //            fatalError( "This code is incomplete. Please fix before release.")
 //        }
+    }
+    
+    func testUnknownEnumerate() {
+        let type = WeekDayType.tuesday
+        print(type.getDescription())
     }
 }
 
