@@ -11,8 +11,10 @@ import UIKit
 //Swift新特性Demo
 
 class ViewController: UIViewController {
+    
     static let animal = Animal()
     @ModelType(ViewController.animal) var modelType: Animal.ModelType?
+    
     let normalClosure: (() -> Void)? = {
         print("This is normalClosure")
     }
@@ -36,7 +38,6 @@ class ViewController: UIViewController {
 //        computeExecuteTime()
 //        addMethodByDynamic()
 //        testGreatInt()
-        testUnknownEnumerate()
     
         autoreleasepool { // 出了作用域就会被释放
             let str = "123"
@@ -158,6 +159,7 @@ class ViewController: UIViewController {
         let type = WeekDayType.tuesday
         print(type.getDescription())
     }
+    
 }
 
 //调用为声明的变量和方法

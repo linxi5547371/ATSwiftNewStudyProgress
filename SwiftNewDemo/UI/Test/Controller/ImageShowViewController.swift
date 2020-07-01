@@ -76,6 +76,7 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
 
 }
 
+// 分块加载
 class LoadBigImageView: UIView {
     var bigImage: UIImage?
     var imageScale: CGFloat = 0

@@ -9,6 +9,7 @@
 import Foundation
 
 enum WeekDayType: String {
+    
     case sunday
     case monday
     case tuesday

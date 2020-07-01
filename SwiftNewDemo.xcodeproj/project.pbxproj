@@ -27,11 +27,21 @@
 		B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D3224655CB200BF268E /* ATGreatInt.swift */; };
 		B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C91244DB4800086BA3F /* propertyWrapper.swift */; };
 		B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A1C96245025590086BA3F /* ATQuestionModel.swift */; };
+		B93B3B4D24AC338E0034364D /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B3B4824AC338E0034364D /* Data+Extensions.swift */; };
+		B93B3B4E24AC338E0034364D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B3B4924AC338E0034364D /* Date+Extensions.swift */; };
+		B93B3B4F24AC338E0034364D /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B3B4A24AC338E0034364D /* URL+Extensions.swift */; };
+		B93B3B5024AC338E0034364D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B3B4B24AC338E0034364D /* DateFormatter+Extensions.swift */; };
+		B93B3B5124AC338E0034364D /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B3B4C24AC338E0034364D /* FileManager+Extensions.swift */; };
+		B9513F20249B48AA00630044 /* ATAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9513F1F249B48AA00630044 /* ATAppInfo.swift */; };
 		B96183372475351A004DA78C /* DDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96183362475351A004DA78C /* DDLog.swift */; };
+		B971E07C248A1C6700751BC8 /* UndoRedoTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971E07B248A1C6700751BC8 /* UndoRedoTestViewController.swift */; };
 		B977BFA824767D8A0007FB5D /* BaseJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */; };
 		B99704F32480AAE400A20B1E /* UINavigationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */; };
 		B9A489BA24874F8400E2B676 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489B924874F8400E2B676 /* UILabel+Extension.swift */; };
 		B9A489BD248910E800E2B676 /* UnknownEnumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */; };
+		B9A489BF2489F69400E2B676 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489BE2489F69400E2B676 /* UIApplication+Extension.swift */; };
+		B9A489C5248A181100E2B676 /* UndoRedoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489C4248A181100E2B676 /* UndoRedoTestView.swift */; };
+		B9C2B96824AC2E4C006F1FB7 /* NSArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,11 +89,21 @@
 		B9224D3224655CB200BF268E /* ATGreatInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATGreatInt.swift; sourceTree = "<group>"; };
 		B92A1C91244DB4800086BA3F /* propertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propertyWrapper.swift; sourceTree = "<group>"; };
 		B92A1C96245025590086BA3F /* ATQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATQuestionModel.swift; sourceTree = "<group>"; };
+		B93B3B4824AC338E0034364D /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		B93B3B4924AC338E0034364D /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B93B3B4A24AC338E0034364D /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		B93B3B4B24AC338E0034364D /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		B93B3B4C24AC338E0034364D /* FileManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		B9513F1F249B48AA00630044 /* ATAppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATAppInfo.swift; sourceTree = "<group>"; };
 		B96183362475351A004DA78C /* DDLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLog.swift; sourceTree = "<group>"; };
+		B971E07B248A1C6700751BC8 /* UndoRedoTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoTestViewController.swift; sourceTree = "<group>"; };
 		B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonModel.swift; sourceTree = "<group>"; };
 		B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationViewController+Extension.swift"; sourceTree = "<group>"; };
 		B9A489B924874F8400E2B676 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownEnumerate.swift; sourceTree = "<group>"; };
+		B9A489BE2489F69400E2B676 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		B9A489C4248A181100E2B676 /* UndoRedoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoTestView.swift; sourceTree = "<group>"; };
+		B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Extension.swift"; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +163,7 @@
 		9291C1C9235DA92B001F2913 /* SwiftNewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B9A489C0248A17D000E2B676 /* UI */,
 				B9224D3124655C9000BF268E /* Tool */,
 				B92A1C95245025420086BA3F /* Model */,
 				929E9EA42398B5A800487C2F /* Extension */,
@@ -150,8 +171,6 @@
 				9291C1FC235DC1D5001F2913 /* SwiftNew */,
 				9291C1CA235DA92B001F2913 /* AppDelegate.swift */,
 				9291C1CC235DA92B001F2913 /* SceneDelegate.swift */,
-				9291C1CE235DA92B001F2913 /* ViewController.swift */,
-				92246193239761AB006A1D08 /* ImageShowViewController.swift */,
 				9291C1D0235DA92B001F2913 /* Main.storyboard */,
 				9291C1D3235DA92D001F2913 /* Assets.xcassets */,
 				9291C1D5235DA92D001F2913 /* LaunchScreen.storyboard */,
@@ -194,12 +213,8 @@
 		929E9EA42398B5A800487C2F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				929E9EA52398B5C200487C2F /* UIImage+Extension.swift */,
-				92EA576B23A1E62200A3352A /* UIColor+Extension.swift */,
-				92EA576D23A1EF2200A3352A /* String+Extension.swift */,
-				B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */,
-				B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */,
-				B9A489B924874F8400E2B676 /* UILabel+Extension.swift */,
+				B93B3B5324AC33CC0034364D /* UIKit */,
+				B93B3B5224AC33B10034364D /* Foundation */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,6 +224,7 @@
 			children = (
 				B9224D3224655CB200BF268E /* ATGreatInt.swift */,
 				B96183362475351A004DA78C /* DDLog.swift */,
+				B9513F1F249B48AA00630044 /* ATAppInfo.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -220,6 +236,68 @@
 				B977BFA724767D8A0007FB5D /* BaseJsonModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B93B3B5224AC33B10034364D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				92EA576D23A1EF2200A3352A /* String+Extension.swift */,
+				B93B3B4824AC338E0034364D /* Data+Extensions.swift */,
+				B93B3B4A24AC338E0034364D /* URL+Extensions.swift */,
+				B93B3B4924AC338E0034364D /* Date+Extensions.swift */,
+				B93B3B4B24AC338E0034364D /* DateFormatter+Extensions.swift */,
+				B93B3B4C24AC338E0034364D /* FileManager+Extensions.swift */,
+				B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */,
+				B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B93B3B5324AC33CC0034364D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				929E9EA52398B5C200487C2F /* UIImage+Extension.swift */,
+				92EA576B23A1E62200A3352A /* UIColor+Extension.swift */,
+				B99704F22480AAE300A20B1E /* UINavigationViewController+Extension.swift */,
+				B9A489B924874F8400E2B676 /* UILabel+Extension.swift */,
+				B9A489BE2489F69400E2B676 /* UIApplication+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B9A489C0248A17D000E2B676 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B9A489C1248A17D700E2B676 /* Test */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B9A489C1248A17D700E2B676 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B9A489C3248A17ED00E2B676 /* View */,
+				B9A489C2248A17E500E2B676 /* Controller */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		B9A489C2248A17E500E2B676 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9291C1CE235DA92B001F2913 /* ViewController.swift */,
+				92246193239761AB006A1D08 /* ImageShowViewController.swift */,
+				B971E07B248A1C6700751BC8 /* UndoRedoTestViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B9A489C3248A17ED00E2B676 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9A489C4248A181100E2B676 /* UndoRedoTestView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,19 +432,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A489C5248A181100E2B676 /* UndoRedoTestView.swift in Sources */,
+				B93B3B4F24AC338E0034364D /* URL+Extensions.swift in Sources */,
 				B96183372475351A004DA78C /* DDLog.swift in Sources */,
 				9291C1CF235DA92B001F2913 /* ViewController.swift in Sources */,
 				92EA576E23A1EF2200A3352A /* String+Extension.swift in Sources */,
 				9291C1CB235DA92B001F2913 /* AppDelegate.swift in Sources */,
 				B977BFA824767D8A0007FB5D /* BaseJsonModel.swift in Sources */,
 				9291C1CD235DA92B001F2913 /* SceneDelegate.swift in Sources */,
+				B93B3B4D24AC338E0034364D /* Data+Extensions.swift in Sources */,
 				B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */,
 				B9224D3324655CB200BF268E /* ATGreatInt.swift in Sources */,
 				B9A489BA24874F8400E2B676 /* UILabel+Extension.swift in Sources */,
+				B93B3B4E24AC338E0034364D /* Date+Extensions.swift in Sources */,
 				92EA576A23A0E05F00A3352A /* NSOptionSet.swift in Sources */,
+				B93B3B5024AC338E0034364D /* DateFormatter+Extensions.swift in Sources */,
 				929E9EA62398B5C200487C2F /* UIImage+Extension.swift in Sources */,
+				B9C2B96824AC2E4C006F1FB7 /* NSArray+Extension.swift in Sources */,
+				B93B3B5124AC338E0034364D /* FileManager+Extensions.swift in Sources */,
+				B9513F20249B48AA00630044 /* ATAppInfo.swift in Sources */,
 				9291C1FE235DC2B4001F2913 /* CustomSequence.swift in Sources */,
 				920876432372831B008C5B73 /* CustomStringInterpolation.swift in Sources */,
+				B9A489BF2489F69400E2B676 /* UIApplication+Extension.swift in Sources */,
+				B971E07C248A1C6700751BC8 /* UndoRedoTestViewController.swift in Sources */,
 				92246194239761AB006A1D08 /* ImageShowViewController.swift in Sources */,
 				9291C1FB235DC0ED001F2913 /* JSONDynamic.swift in Sources */,
 				B99704F32480AAE400A20B1E /* UINavigationViewController+Extension.swift in Sources */,
