@@ -43,6 +43,7 @@
 		B9A489C5248A181100E2B676 /* UndoRedoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A489C4248A181100E2B676 /* UndoRedoTestView.swift */; };
 		B9C2B96824AC2E4C006F1FB7 /* NSArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
+		B9E9B09524C13A8300B06A50 /* ATKVODemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E9B09424C13A8300B06A50 /* ATKVODemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		B9A489C4248A181100E2B676 /* UndoRedoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoTestView.swift; sourceTree = "<group>"; };
 		B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Extension.swift"; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		B9E9B09424C13A8300B06A50 /* ATKVODemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATKVODemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 				9291C1CE235DA92B001F2913 /* ViewController.swift */,
 				92246193239761AB006A1D08 /* ImageShowViewController.swift */,
 				B971E07B248A1C6700751BC8 /* UndoRedoTestViewController.swift */,
+				B9E9B09424C13A8300B06A50 /* ATKVODemoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				B99704F32480AAE400A20B1E /* UINavigationViewController+Extension.swift in Sources */,
 				B92A1C92244DB4800086BA3F /* propertyWrapper.swift in Sources */,
 				92EA576C23A1E62200A3352A /* UIColor+Extension.swift in Sources */,
+				B9E9B09524C13A8300B06A50 /* ATKVODemoViewController.swift in Sources */,
 				B92A1C97245025590086BA3F /* ATQuestionModel.swift in Sources */,
 				B9A489BD248910E800E2B676 /* UnknownEnumerate.swift in Sources */,
 			);
