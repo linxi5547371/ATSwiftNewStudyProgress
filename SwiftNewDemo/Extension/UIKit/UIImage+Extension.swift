@@ -47,6 +47,7 @@ extension UIImage {
 //        UIGraphicsBeginImageContext(CGSize(width: size.width / 2, height: size.height / 2))
 //        UIImage(cgImage: scaledImage).draw(at: CGPoint(x: -size.width / 4, y: -size.width / 4))
 //        let pImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
 //        return pImage
         
         //Plan3
