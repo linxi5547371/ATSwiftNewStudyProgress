@@ -15,7 +15,7 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     var bigImageView: LoadBigImageView!
     var contentView: UIView!
-    let imageURL = Bundle.main.url(forResource: "Earth", withExtension: ".jpg")
+    let imageURL = Bundle.main.url(forResource: "cat", withExtension: ".png")
     var image: UIImage?
     let isUseLayer = true
 
@@ -29,7 +29,7 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
             
             
             
-            var imageRect = CGRect(x: 0, y: 0, width: image?.cgImage?.width ?? 0, height: image?.cgImage?.height ?? 0);
+            var imageRect = CGRect(x: 0, y: 0, width: image?.cgImage?.width ?? 10000, height: image?.cgImage?.height ?? 10000);
             let imageScale = UIScreen.main.bounds.width / imageRect.size.width
             imageRect.size = CGSize(width: imageRect.size.width * imageScale, height: imageRect.size.height * imageScale)
             if (imageRect.height < UIScreen.main.bounds.height - 20) {
@@ -40,11 +40,12 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
             //预览图
             let preImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height))
             preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageURL: imageURL!)
-            preImageView.contentMode = .scaleAspectFill
+//            preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageData: data!)
+//            preImageView.contentMode = .scaleAspectFill
             self.contentView.addSubview(preImageView)
             
-            self.bigImageView = LoadBigImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height), image: self.image ?? UIImage(), scale: imageScale)
-            self.contentView.addSubview(bigImageView)
+//            self.bigImageView = LoadBigImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height), image: self.image ?? UIImage(), scale: imageScale)
+//            self.contentView.addSubview(bigImageView)
             
             self.scrollView.minimumZoomScale = 1
             self.scrollView.maximumZoomScale = pow(2, ceil(log2(1/imageScale)) + 1.0)
@@ -54,10 +55,10 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.contentSize = imageRect.size
         } else {
             self.scrollView.isHidden = true
-//            let data = try? Data(contentsOf: imageURL ?? URL(fileURLWithPath: ""))
-//            image = UIImage(data: data!)
-            let size = CGSize(width: 12000, height: 12000)
-            image = UIImage.getImageWithSize(size: size, imageURL: imageURL!)
+            let data = try? Data(contentsOf: imageURL ?? URL(fileURLWithPath: ""))
+            image = UIImage(data: data!)
+//            let size = CGSize(width: 12000, height: 12000)
+//            image = UIImage.getImageWithSize(size: size, imageURL: imageURL!)
             self.imageView.image = image
         }
     }

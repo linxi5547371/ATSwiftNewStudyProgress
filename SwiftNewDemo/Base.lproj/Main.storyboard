@@ -148,7 +148,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cw_report_math_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bom-kC-Ngz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cw_report_math_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bom-kC-Ngz">
                                 <rect key="frame" x="73" y="329" width="268" height="452"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
