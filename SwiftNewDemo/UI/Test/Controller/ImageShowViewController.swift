@@ -28,7 +28,6 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
             image = UIImage(data: data!)
             
             
-            
             var imageRect = CGRect(x: 0, y: 0, width: image?.cgImage?.width ?? 10000, height: image?.cgImage?.height ?? 10000);
             let imageScale = UIScreen.main.bounds.width / imageRect.size.width
             imageRect.size = CGSize(width: imageRect.size.width * imageScale, height: imageRect.size.height * imageScale)
@@ -39,13 +38,14 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
             self.contentView = UIView(frame: imageRect)
             //预览图
             let preImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height))
-            preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageURL: imageURL!)
-//            preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageData: data!)
+//            preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageURL: imageURL!)
+            preImageView.image = UIImage.getImageWithSize(size: imageRect.size, imageData: data!)
 //            preImageView.contentMode = .scaleAspectFill
             self.contentView.addSubview(preImageView)
             
-//            self.bigImageView = LoadBigImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height), image: self.image ?? UIImage(), scale: imageScale)
-//            self.contentView.addSubview(bigImageView)
+            self.bigImageView = LoadBigImageView(frame: CGRect(x: 0, y: 0, width: imageRect.width, height: imageRect.height), image: self.image ?? UIImage(), scale: imageScale)
+            self.bigImageView.bigImageData = data!
+            self.contentView.addSubview(bigImageView)
             
             self.scrollView.minimumZoomScale = 1
             self.scrollView.maximumZoomScale = pow(2, ceil(log2(1/imageScale)) + 1.0)
@@ -70,6 +70,7 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
         if (isUseLayer) {
             return self.contentView
         } else {
+            
             return self.imageView
         }
     }
@@ -81,6 +82,7 @@ class ImageShowViewController: UIViewController, UIScrollViewDelegate {
 class LoadBigImageView: UIView {
     var bigImage: UIImage?
     var imageScale: CGFloat = 0
+    var bigImageData: Data!
     
     init(frame: CGRect, image: UIImage, scale: CGFloat) {
         super.init(frame: frame)
@@ -108,7 +110,6 @@ class LoadBigImageView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-
         let rec = CGRect(x: rect.origin.x / imageScale, y: rect.origin.y / imageScale, width: rect.size.width / imageScale, height: rect.size.height / imageScale)
         let copImg = self.bigImage?.cgImage?.cropping(to: rec)
         

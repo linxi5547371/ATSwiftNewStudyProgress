@@ -90,10 +90,15 @@ extension XZJSONValue: Encodable {
     
 }
 
-//extension XZJSONValue: YTCodableBuiltInType {
-//
-//    public init() {
-//        self = .string("")
-//    }
-//
-//}
+extension XZJSONValue {
+
+    public init() {
+        self = .string("")
+    }
+    
+    func testData() {
+        var model: XZJSONValue?
+        model = try? JSONDecoder().decode(XZJSONValue.self, from: Data())
+    }
+
+}

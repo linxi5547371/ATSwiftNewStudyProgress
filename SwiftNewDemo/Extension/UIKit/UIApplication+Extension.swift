@@ -50,5 +50,48 @@ extension UIApplication {
     }
 }
 
+// 护眼模式
+//extension UIApplication {
+//    @Storage(XZStorageKey.isOnEyeShieldPatternKey, defaultValue: false)
+//    private(set) static var isOnEyeShieldPattern: Bool
+//
+//    private(set) static var eyeShieldWindow: UIWindow?
+//
+//    static func showEyeShieldWindow() {
+//        isOnEyeShieldPattern = true
+//        let newWindow = UIWindow()
+//        newWindow.isUserInteractionEnabled = false
+//        newWindow.windowLevel = UIWindow.Level(2099.0)
+//        newWindow.backgroundColor = UIColor(rgbHex: 0xFFBF1C).withAlphaComponent(0.2)
+//        newWindow.isHidden = false
+//        let vc = XZEyeShieldViewController()
+//        vc.view.backgroundColor = .clear
+//        newWindow.rootViewController = vc
+//        eyeShieldWindow = newWindow
+//    }
+//
+//    static func hideEyeShieldWindow() {
+//        isOnEyeShieldPattern = false
+//        eyeShieldWindow?.isHidden = true
+//        eyeShieldWindow = nil
+//    }
+//
+//    fileprivate class XZEyeShieldViewController: XZBaseController {
+//
+//        override var preferredStatusBarStyle: UIStatusBarStyle {
+//            return .default
+//        }
+//
+//        override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//            return .portrait
+//        }
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//
+//        }
+//    }
+//}
+
 #endif
 
