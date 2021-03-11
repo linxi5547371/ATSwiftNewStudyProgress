@@ -828,3 +828,32 @@ public extension String {
 
 #endif
 
+extension String {
+    private func isMobileNumber(mobileNum: String) -> Bool {
+        /**
+         * 手机号码
+         * 移动：134/135/136/137/138/139/150/151/152/157/158/159/182/183/184/187/188/147/178
+         * 联通：130/131/132/155/156/185/186/145/176
+         * 电信：133/153/180/181/189/177
+         */
+        let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
+        let CM = "^1(34[0-8]|(3[5-9]|5[0127-9]|8[23478]|47|78)\\d)\\d{7}$"
+        let CU = "^1(3[0-2]|5[256]|8[56]|45|76)\\d{8}$"
+        let CT = "^1((33|53|77|8[019])[0-9]|349)\\d{7}$"
+        let predicateMobile = NSPredicate(format: "SELF MATCHES %@", mobile)
+        let predicateCM = NSPredicate(format: "SELF MATCHES %@", CM)
+        let predicateCU = NSPredicate(format: "SELF MATCHES %@", CU)
+        let predicateCT = NSPredicate(format: "SELF MATCHES %@", CT)
+        if predicateMobile.evaluate(with: mobileNum) ||
+           predicateCM.evaluate(with: mobileNum) ||
+           predicateCU.evaluate(with: mobileNum) ||
+           predicateCT.evaluate(with: mobileNum) {
+            return true
+        } else {
+            return false
+        }
+        
+    }
+
+}
+
