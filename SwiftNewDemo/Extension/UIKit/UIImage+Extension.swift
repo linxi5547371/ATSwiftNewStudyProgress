@@ -147,4 +147,154 @@ extension UIImage {
     }
 }
 
+extension UIImage {
+    
+    // 灰度图
+    func getGreyMap() -> UIImage? {
+        guard let cgImage = cgImage else { return nil}
+        let width = Int(size.width)
+        let height = Int(size.height)
+        let colorSpace = CGColorSpaceCreateDeviceGray()
+        let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: CGBitmapInfo().rawValue)
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        context?.draw(cgImage, in: rect)
+        if let makeImage = context?.makeImage() {
+            return UIImage(cgImage: makeImage)
+        } else {
+            return nil
+        }
+    }
+    
+    // 二值化
+    func getBinaryzationMap() -> UIImage? {
+        guard let cgImage = cgImage else { return nil}
+                let width = 64
+                let height = 64
+                let bytesPerRow = 4 * width
+                let bufferData = UnsafeMutablePointer<UInt8>.allocate(capacity: 4 * width * height)
+                bufferData.initialize(repeating: 0, count: 4 * width * height)
+        //        let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
+                let bitmapInfo = CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.noneSkipLast.rawValue
+                
+        //            var bitMaps: [UInt32] = Array.init(repeating: 0, count: width * height)
+                let colorSpace = CGColorSpaceCreateDeviceRGB()
+                let context = CGContext(data: bufferData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+                print("width = \(width) height = \(height)")
+        //        print("context.bitsPerComponent = \(context?.bitsPerComponent) context.bytesPerRow =\(context?.bytesPerRow) context.bitsPerPixel = \(context?.bitsPerPixel)")
+                
+                let rect = CGRect(x: 0, y: 0, width: width, height: height)
+                context?.draw(cgImage, in: rect)
+                
+                for i in 0..<width*height {
+                    let byteStart = i * 4
+                    let r = Float(bufferData.advanced(by: byteStart).pointee)
+                    let g = Float(bufferData.advanced(by: byteStart + 1).pointee)
+                    let b = Float(bufferData.advanced(by: byteStart + 2).pointee)
+                    let ap = Float(bufferData.advanced(by: byteStart + 3).pointee)
+                    print("RGB r = \(r) g = \(g) b = \(b) ap = \(ap)")
+                    if r < 200 || g < 200 || b < 200 {
+                        bufferData.advanced(by: byteStart).pointee = 0x00
+                        bufferData.advanced(by: byteStart + 1).pointee = 0x00
+                        bufferData.advanced(by: byteStart + 2).pointee = 0x00
+                        bufferData.advanced(by: byteStart + 3).pointee = 0xFF
+                    } else {
+                        bufferData.advanced(by: byteStart).pointee = UInt8(r)
+                        bufferData.advanced(by: byteStart + 1).pointee = UInt8(g)
+                        bufferData.advanced(by: byteStart + 2).pointee = UInt8(b)
+                        bufferData.advanced(by: byteStart + 3).pointee = UInt8(ap)
+                    }
+                }
+                
+                let dataProvider = CGDataProvider(dataInfo: nil, data: bufferData, size: 4 * width * height) { (_, data, _) in
+                    data.deallocate()
+                }
+                
+                guard let provider = dataProvider else {
+                    return nil
+                }
+                
+                let cgBitmapInfoUInt32 = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Big.rawValue
+                let cgBitmapInfo = CGBitmapInfo(rawValue: cgBitmapInfoUInt32)
+                let newCGImageOptional = CGImage(width: width, height: height,
+                                                 bitsPerComponent: 8,
+                                                 bitsPerPixel: 32,
+                                                 bytesPerRow: bytesPerRow,
+                                                 space: colorSpace,
+                                                 bitmapInfo: cgBitmapInfo,
+                                                 provider: provider,
+                                                 decode: nil,
+                                                 shouldInterpolate: true,
+                                                 intent: CGColorRenderingIntent.defaultIntent)
+                guard let newCGImage = newCGImageOptional else {
+                    return nil
+                }
+                return UIImage(cgImage: newCGImage)
+    }
+    
+    // 改变图像颜色
+    func getBinaryzationMapV2() -> UIImage? {
+        guard let cgImage = cgImage else { return nil}
+        let width = 64
+        let height = 64
+        let bytesPerRow = 4 * width
+        let bufferData = UnsafeMutablePointer<UInt8>.allocate(capacity: 4 * width * height)
+        bufferData.initialize(repeating: 0, count: 4 * width * height)
+//        let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
+        let bitmapInfo = CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.noneSkipLast.rawValue
+        
+//            var bitMaps: [UInt32] = Array.init(repeating: 0, count: width * height)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: bufferData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        print("width = \(width) height = \(height)")
+//        print("context.bitsPerComponent = \(context?.bitsPerComponent) context.bytesPerRow =\(context?.bytesPerRow) context.bitsPerPixel = \(context?.bitsPerPixel)")
+        
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        context?.draw(cgImage, in: rect)
+        
+        for i in 0..<width*height {
+            let byteStart = i * 4
+            let r = Float(bufferData.advanced(by: byteStart).pointee)
+            let g = Float(bufferData.advanced(by: byteStart + 1).pointee)
+            let b = Float(bufferData.advanced(by: byteStart + 2).pointee)
+            let ap = Float(bufferData.advanced(by: byteStart + 3).pointee)
+            print("RGB r = \(r) g = \(g) b = \(b) ap = \(ap)")
+            if r < 10 {
+                bufferData.advanced(by: byteStart).pointee = 0x00
+                bufferData.advanced(by: byteStart + 1).pointee = 0x25
+                bufferData.advanced(by: byteStart + 2).pointee = 0xF6
+                bufferData.advanced(by: byteStart + 3).pointee = 0xFF
+            } else {
+                bufferData.advanced(by: byteStart).pointee = UInt8(r)
+                bufferData.advanced(by: byteStart + 1).pointee = UInt8(g)
+                bufferData.advanced(by: byteStart + 2).pointee = UInt8(b)
+                bufferData.advanced(by: byteStart + 3).pointee = UInt8(ap)
+            }
+        }
+        
+        let dataProvider = CGDataProvider(dataInfo: nil, data: bufferData, size: 4 * width * height) { (_, data, _) in
+            data.deallocate()
+        }
+        
+        guard let provider = dataProvider else {
+            return nil
+        }
+        
+        let cgBitmapInfoUInt32 = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Big.rawValue
+        let cgBitmapInfo = CGBitmapInfo(rawValue: cgBitmapInfoUInt32)
+        let newCGImageOptional = CGImage(width: width, height: height,
+                                         bitsPerComponent: 8,
+                                         bitsPerPixel: 32,
+                                         bytesPerRow: bytesPerRow,
+                                         space: colorSpace,
+                                         bitmapInfo: cgBitmapInfo,
+                                         provider: provider,
+                                         decode: nil,
+                                         shouldInterpolate: true,
+                                         intent: CGColorRenderingIntent.defaultIntent)
+        guard let newCGImage = newCGImageOptional else {
+            return nil
+        }
+        return UIImage(cgImage: newCGImage)
+    }
+}
 

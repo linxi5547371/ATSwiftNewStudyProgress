@@ -115,6 +115,13 @@
                                     <action selector="redoAction" destination="h1Y-FJ-wb0" eventType="touchUpInside" id="ek2-F3-XOP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-h9-6jz">
+                                <rect key="frame" x="172" y="397" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -161,8 +168,35 @@
             </objects>
             <point key="canvasLocation" x="2411.594202898551" y="109.82142857142857"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Uw3-SG-86V">
+            <objects>
+                <viewController id="fey-si-OM8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCf-6y-DER">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bigImage" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-J5-eAS">
+                                <rect key="frame" x="87" y="272" width="240" height="420"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xow-8U-kxP" firstAttribute="trailing" secondItem="hgk-J5-eAS" secondAttribute="trailing" constant="87" id="Ke8-KK-SYe"/>
+                            <constraint firstItem="hgk-J5-eAS" firstAttribute="top" secondItem="Xow-8U-kxP" secondAttribute="top" constant="228" id="ZjK-kM-4sY"/>
+                            <constraint firstItem="hgk-J5-eAS" firstAttribute="leading" secondItem="Xow-8U-kxP" secondAttribute="leading" constant="87" id="d0r-SF-QO8"/>
+                            <constraint firstItem="Xow-8U-kxP" firstAttribute="bottom" secondItem="hgk-J5-eAS" secondAttribute="bottom" constant="462" id="eTk-Ou-9Wz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xow-8U-kxP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFv-Dg-TqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3382.608695652174" y="302.67857142857139"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bigImage" width="1920" height="1080"/>
         <image name="cw_report_math_bg" width="375" height="812"/>
         <image name="xz_btn_production_expand" width="16" height="8"/>
     </resources>
