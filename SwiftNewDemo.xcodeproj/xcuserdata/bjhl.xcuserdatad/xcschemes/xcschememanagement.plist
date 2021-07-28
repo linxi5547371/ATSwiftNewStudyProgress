@@ -6,8 +6,28 @@
 	<dict>
 		<key>SwiftNewDemo.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9291C1C6235DA92B001F2913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9291C1DC235DA92D001F2913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9291C1E7235DA92D001F2913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

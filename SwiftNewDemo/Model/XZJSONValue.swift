@@ -99,6 +99,7 @@ extension XZJSONValue {
     func testData() {
         var model: XZJSONValue?
         model = try? JSONDecoder().decode(XZJSONValue.self, from: Data())
+//        JSONEncoder().encode(<#T##value: Encodable##Encodable#>)
     }
 
 }

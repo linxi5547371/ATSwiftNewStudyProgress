@@ -53,6 +53,7 @@
 		B9A70C8F25FB08F200DD8DA1 /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A70C8E25FB08F200DD8DA1 /* UIImage+QRCode.swift */; };
 		B9AADCA6251AEC98004B0DA6 /* XZJSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AADCA5251AEC97004B0DA6 /* XZJSONValue.swift */; };
 		B9C2B96824AC2E4C006F1FB7 /* NSArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */; };
+		B9DFCC17269478E9006BBE82 /* Enum+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DFCC16269478E9006BBE82 /* Enum+Equatable.swift */; };
 		B9E3E6852473B0EC00089A59 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */; };
 		B9E9B09524C13A8300B06A50 /* ATKVODemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E9B09424C13A8300B06A50 /* ATKVODemoViewController.swift */; };
 		B9EE0A8925418EA4006726D7 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EE0A8825418EA4006726D7 /* cat.png */; };
@@ -129,6 +130,7 @@
 		B9A70C8E25FB08F200DD8DA1 /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
 		B9AADCA5251AEC97004B0DA6 /* XZJSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZJSONValue.swift; sourceTree = "<group>"; };
 		B9C2B96724AC2E4C006F1FB7 /* NSArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Extension.swift"; sourceTree = "<group>"; };
+		B9DFCC16269478E9006BBE82 /* Enum+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+Equatable.swift"; sourceTree = "<group>"; };
 		B9E3E6842473B0EC00089A59 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		B9E9B09424C13A8300B06A50 /* ATKVODemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATKVODemoViewController.swift; sourceTree = "<group>"; };
 		B9EE0A8825418EA4006726D7 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				92EA576923A0E05F00A3352A /* NSOptionSet.swift */,
 				B92A1C91244DB4800086BA3F /* propertyWrapper.swift */,
 				B9A489BC248910E800E2B676 /* UnknownEnumerate.swift */,
+				B9DFCC16269478E9006BBE82 /* Enum+Equatable.swift */,
 			);
 			path = SwiftNew;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				B9312B532664879E002E9848 /* UIImage+GIF.swift in Sources */,
 				92EA576A23A0E05F00A3352A /* NSOptionSet.swift in Sources */,
 				B96C3B6A262813FA00431794 /* PictureProcessController.swift in Sources */,
+				B9DFCC17269478E9006BBE82 /* Enum+Equatable.swift in Sources */,
 				B93B3B5024AC338E0034364D /* DateFormatter+Extensions.swift in Sources */,
 				929E9EA62398B5C200487C2F /* UIImage+Extension.swift in Sources */,
 				B9C2B96824AC2E4C006F1FB7 /* NSArray+Extension.swift in Sources */,

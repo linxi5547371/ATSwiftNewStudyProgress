@@ -82,6 +82,7 @@ class ViewController: UIViewController {
     func optionsTest() -> String {
         let type: StringJoinType = .joinBase
         var result = ""
+        
         if (type.contains(.joinName)) {
             result.append("Albert")
         }
